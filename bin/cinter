@@ -1,4 +1,12 @@
 #!/usr/bin/env php
 <?php
 
+use PHPCParser\Context;
+use PHPCParser\CParser;
+
 require_once __DIR__ . '/../vendor/autoload.php';
+
+$parser = new CParser;
+$context = new Context();
+
+dd($parser->parse(__DIR__ . '/../examples/hello-world.c', $context));

@@ -6,5 +6,8 @@
     },
     "require": {
         "ircmaxell/php-c-parser": "dev-master"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.2"
     }
 }
