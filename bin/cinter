@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 
+use Cinter\Interpreter\TreeWalk;
 use PHPCParser\Context;
 use PHPCParser\CParser;
 
@@ -8,5 +9,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
 $parser = new CParser;
 $context = new Context();
+$ast = $parser->parse(__DIR__ . '/../examples/hello-world.c', $context);
+$interpreter = new TreeWalk;
 
-dd($parser->parse(__DIR__ . '/../examples/hello-world.c', $context));
+return $interpreter->interpret($ast);

@@ -1,4 +1,7 @@
 int main() {
-    printf("Hello, world!\n");
+    char* name = "Ryan";
+    
+    printf("Hello, %s!\n", name);
+
     return 0;
 }
